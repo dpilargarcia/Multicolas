@@ -1,0 +1,51 @@
+.chart {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    color: #000;
+}
+
+.axis path,.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.bar {
+    fill: #0D4C57;
+}
+
+.bar-failed {
+    fill:#CECECE;
+}
+
+.bar-running {
+    fill: #742E46;
+}
+
+.bar-succeeded {
+    fill: #33b5e5;
+}
+
+.bar-killed {
+    fill: #C90B33;
+}
+.bar-B{
+    fill:#262626;
+}
+#forkme_banner {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 1px;
+    z-index: 10;
+    padding: 5px 5px 10px 10px;
+    color: #fff;
+    background:
+        url('http://dk8996.github.io/Gantt-Chart/images/blacktocat.png')
+		#0090ff no-repeat 95% 50%;
+    font-weight: 700;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    text-decoration: none;
+}

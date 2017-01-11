@@ -1,0 +1,163 @@
+body{
+	margin: 0 0px;
+}
+.container-fluid-arriba{
+    background: #024959;
+    width:auto;
+    margin: 0 auto;
+}
+
+.container-fluid{
+    background: #024959;
+    width:1130px;
+    margin: 0 auto;
+}
+.col-sm-6{
+    width:380px;
+    margin: 0 auto;
+    text-align: center;      
+}
+
+h2{
+    text-align: center;
+    color: #245269; 
+    font-family: 'Handlee', serif;
+    font-weight: bold;
+}
+h3{
+    text-align: center;
+    color: white; 
+    font-family: 'Handlee', serif;
+}
+h1{
+	text-align: center;
+	color: #FFF;
+	font-family: 'Handlee', serif;
+}
+.cpu{
+    border: 1px solid black;
+    width: 730px;
+    height: 35px;
+    margin: 0 auto;
+}
+.cola1{
+    height: 150px;
+    background: #245269;
+    overflow: auto;
+    font-family: 'Handlee', serif;
+}
+.procesador{
+    
+    padding: 5px;
+    width: 1130px;
+    margin: 0 auto;
+}
+.contenedor{
+    padding: 40px;
+}
+table{
+    font-size: 15px;
+    font-family: fantasy;
+    width: 550px;
+    margin: 0 auto;
+    background: #fff;
+}
+.container{
+	width: 700px;
+	font-family: 'Handlee', Helvetica, Arial, sans-serif;
+	background-color: #245269;
+	background-attachment: fixed;
+	background-repeat: repeat;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	position: relative;
+}
+iframe{
+    width: 80%;
+    height: 300px;
+}
+.tablass{
+    overflow: auto;
+}
+button{
+    width:260px;
+    margin: 0 auto;
+    font-family: 'Handlee', serif;
+}
+.colA{
+    width:740px;
+    margin: 0 auto;
+    background-color: #003153;
+    border: 3px solid #009FA8;
+    padding: 20px;
+    font-family: 'Handlee', serif;
+    font-weight: bold;
+}
+.colA1{
+    width:600px;
+    margin: 0 auto;
+    background-color: #003153;
+    border: 3px solid #009FA8;
+    padding: 20px;
+    font-family: 'Handlee', serif;
+    font-weight: bold;
+}
+.BotonesCola{
+    width:300px;
+    transform: translateX(65%);
+    background-color: #d8ecf7;
+    border: 3px solid #afcde3;
+    padding: 10px;
+    font-family: 'Handlee', serif;
+    font-weight: bold;
+    
+}
+.colB{
+    width:740px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    font-family: 'Handlee', serif;
+}
+label{
+    color: #28a4c9; 
+    text-align: center;
+    font-family: 'Handlee', serif;
+    font-size: 20px;
+}
+
+h4{
+    color: white; 
+    text-align: center;
+    font-family: 'Handlee', serif;
+}
+h2{
+    color: #026DA6; 
+    text-align: center;
+    font-family: 'Handlee', serif;
+    font-size: 25px;
+}
+.col-sm-8{
+    width:1710px;
+    margin: 0 auto;
+}
+.convencion{
+    font-family: 'Handlee';
+    color: white;
+    padding:12px;
+    line-height:1.6;
+    width: 130px;
+    text-align: center;
+}
+.conveciones{
+    float: left;
+    width: 80px;
+    margin-left: 95px;
+    margin-bottom: 20px;
+}
+.gantt{
+    float: left;
+    width: 880px;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="http://fonts.googleapis.com/css?family=Handlee" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="imgs/icon2.png">
+    <script type="text/javascript" src="script/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="script/proceso.js"></script>
+    <script type="text/javascript" src="script/nodo.js"></script>
+    <script type="text/javascript" src="script/cola.js"></script>
+    <script type="text/javascript" src="script/procesador.js"></script>
+    <script type="text/javascript" src="script/recursoDisponible.js"></script>
+    <script type="text/javascript" src="script/script.js"></script>		
+    <link href="estilos/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilos/estilo.css" rel="stylesheet">
+
+    <!--archivos de gantt-->
+    <script type="text/javascript" src="DiagramaG/d3.v3.min.js"></script>
+    <script type="text/javascript" src="DiagramaG/gantt-chart-d3.js"></script>
+    <script type="text/javascript" src="DiagramaG/miGantt.js"></script>
+    <link href="DiagramaG/estiloG.css" rel="stylesheet">
+
+    <title>Multicolas</title>
+</head>
+
+<body>
+
+    <div class ="container-fluid-arriba">
+        <div class ="row">
+            <div class="colA">
+                <hr ><h1>Algoritmo Multicolas</h1><hr>
+                <hr color="green" size=1 width="150">
+                <h3>Procesos</h3>
+                <h3>Quantum = 5</h3>
+                <hr color="yellow" size=5 width="150">
+                <div class="BotonesCola">
+                    <p><button type="button"  id="crear1">Aleatorios</button></p>
+                    <p><button type="button" id="generarTabla">Generar Tabla</button></p>
+                </div>
+                
+           </div>
+        </div>
+    </div>
+
+<div class ="container-fluid-arriba"> 
+    <div class="container2">
+        <div></div>
+        <div class="container">
+          <h3>Tabla de Procesos</h3>
+            <table class="table table-striped" id="vrendimiento1"></table>
+        </div>
+    </div>
+</div>
+    
+    <!--FILA PARA LOS PROCESADORES-->
+    <div class="container-fluid-arriba">
+        <div class ="row">
+            <!----------------------Procesador 1------------------------------->
+            
+                <div class="colA1">
+                    <button type="button"  id="ejecutar1">Iniciar</button>	
+                    <button type="button"  id="interrumpir1" disabled>Bloquear Proceso</button>	
+                </div>
+        </div>    
+        <div class="container-fluid">
+            <div class="procesador">
+                <div class="row">
+                   <!--NUEVA ZONA CRITICA-->
+                    <div class="row">
+                            <hr><h4 style="background-color:#C90B33;">Zona Crítica</h4><hr>
+                            <div class="cola1">
+                                <table class="table table-striped" id="rendimientoCPU1"></table>
+                            </div>
+                            
+                    </div>
+                    
+                    <!--Cola 1-->
+                    <div class="col-sm-6">
+                        <hr><h4 style="background-color:#FA6A31;">Cola 1 (Prioridad 1) FIFO</h4><hr>
+                        <div class="cola1">
+                            <!-- Listos -->
+                            <table class="table table-striped" id="listosC1P1"></table> <!--PILAS CAMBIO listos POR listosC1P1--> 
+                        </div>
+                    </div>
+                    
+                    <!--Cola 2-->
+                    <div class="col-sm-6">
+                        <hr><h4 style="background-color:#165751;">Cola 2 (Prioridad 2) SJF</h4><hr>
+                        <div class="cola1">
+                            <!-- Listos -->
+                            <table class="table table-striped" id="listosC1P2"></table> <!--PILAS CAMBIO POR listosC1P2--> 
+                        </div>
+                    </div>
+                    
+                    <!--Cola 3-->
+                    <div class="col-sm-6">
+                        <hr><h4 style="background-color:#ED9E46;">Cola 3 (Prioridad 3) Prioridades</h4><hr>
+                        <div class="cola1">
+                            <!-- Listos -->
+                            <table class="table table-striped" id="listosC1P3"></table> <!--PILAS CAMBIO POR listosC1P3--> 
+                        </div>
+                    </div>
+                    
+                    <!--OTRAS COLAS-->
+                     <div class="col-sm-6">
+                        <hr><h4 style="background-color:#262626;">Procesos Bloqueados</h4><hr>
+                        <div class="cola1">
+                            <!-- Bloqueados -->
+                            <table class="table table-striped" id="bloqueados1"></table> <!--PILAS DONDE DIEGO ES bloqueados1-->
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-sm-6">
+                        <hr><h4 style="background-color:#742E46">Procesos Suspendidos</h4><hr>
+                        <div class="cola1">
+                            <!-- Suspendidos -->
+                            <table class="table table-striped" id="suspendidos1"></table><!--PILAS DONDE DIEGO ES suspendidos1-->
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-6">
+                        <hr><h4 style="background-color:#C90B33">Procesos Finalizados</h4><hr>
+                        <div class="cola1">
+                            <!-- Terminados -->
+                            <table class="table table-striped" id="terminados1"></table><!--PILAS DONDE DIEGO ES terminados1-->
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-header"></div>
+
+    <div class="container2">
+        <!------------------------------ GANTT -------------------------------->
+        <h2>Diagrama de Gantt</h2>
+        <div>
+            <div class="conveciones">
+                <div class="convencion" style="background-color:#525659;">Tiempo de Espera</div>
+                <div class="convencion" style="background-color:#0D4C57;">Tiempo de Ejecución</div>
+                <div class="convencion" style="background-color:#742E46;">Procesos Suspendidos</div>
+                <div class="convencion" style="background-color:#262626;">Procesos Bloqueados</div>
+            </div>
+            <div class="gantt">
+                <div id="gantt1"></div>
+            </div>
+  
+        </div>
+    </div>
+    <br><br>
+    
+</body>
+</html>
